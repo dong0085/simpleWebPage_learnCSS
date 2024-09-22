@@ -306,31 +306,32 @@ footer {
   html {
     font-size: 120%;
 
-  nav {
-    width: 20%;
-    float: left;
-    border-right: 1px solid lightgrey;
-  }
+    nav {
+      width: 20%;
+      float: left;
+      border-right: 1px solid lightgrey;
+    }
 
-  ul.mainnav {
-    border-left: none;
-  }
+    ul.mainnav {
+      border-left: none;
+    }
 
-  .mainnav > li {
-    float: left;
-    width: 100%;
-    list-style: none;
-    border-bottom: 1px solid lightgrey;
-    border-right: none;
-  }
+    .mainnav > li {
+      float: left;
+      width: 100%;
+      list-style: none;
+      border-bottom: 1px solid lightgrey;
+      border-right: none;
+    }
 
-  .col--2 {
-    width: 40%;
-    border-right: 1px solid lightgrey;
-    float: left;
-  }
+    .col--2 {
+      width: 40%;
+      border-right: 1px solid lightgrey;
+      float: left;
+    }
 
-  .col--2:last-child {
-    border: none;
+    .col--2:last-child {
+      border: none;
+    }
   }
 }
