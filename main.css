@@ -1,0 +1,289 @@
+/**************************
+    Imports
+**************************/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/*
+
+CSS Reset
+Adapted from: https://piccalil.li/blog/a-more-modern-css-reset/
+ 
+*/
+
+/**************************
+Font-sizes for Typographic Hierarchy
+5.063rem
+3.375rem
+2.25rem
+1.5rem
+1.0rem
+**************************/
+
+/* Box sizing rules */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  line-height: 1.5;
+  font-size: 16px;
+}
+h1 {
+  font-size: 5.063rem;
+  padding: 1rem;
+}
+h2 {
+  font-size: 3.375rem;
+  line-height: 4rem;
+  padding: 1rem;
+}
+h3 {
+  font-size: 2.25rem;
+  line-height: 4rem;
+  padding: 1rem;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ol,
+ul,
+dl,
+dd {
+  margin: 0 0 1.5rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+/* h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+} */
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: #36bf7f;
+}
+
+a:not([class]):hover,
+a:not([class]):focus-visible {
+  color: #d96666;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Update default button cursor to indicate interactivity */
+button {
+  cursor: pointer;
+}
+
+/* Make sure text areas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 3rem;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+ul.mainnav {
+  width: 100%;
+  overflow: auto;
+  border-bottom: 1px solid lightgrey;
+  padding-inline-start: 0;
+}
+
+/* Link items are set to 100% width to take up the entirety of the screen real-estate,
+ however, this looks bad now, will change in media query.
+ Same logic should apply to the story section */
+.mainnav > li {
+  float: left;
+  width: 100%;
+  list-style: none;
+  border-right: 1px solid lightgrey;
+}
+
+.mainnav a,
+.mainnav a:visited {
+  font-size: 2.25rem;
+  display: block;
+  text-align: center;
+  color: #5b6a7f;
+}
+
+.mainnav a:active,
+.mainnav a:focus,
+.mainnav a:hover {
+  color: #8ca2c2;
+}
+/*
+layouts
+*/
+/* This wrapper is used to give edges of screen some blank space. */
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #aecca6;
+  color: #fff;
+}
+
+nav {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+/* Width to be changed to 100% to take up entirety of viewport real-estate */
+.col--2 {
+  width: 100%;
+  border-right: 1px solid lightgrey;
+  float: left;
+  padding: 1rem 2rem;
+}
+
+.col--2:last-child {
+  border: none;
+}
+
+footer {
+  padding: 1rem 2rem;
+  width: 100%;
+  clear: both;
+}
+
+/***********************************
+  Media Queries
+***********************************/
+
+@media only screen and (min-width: 25em) {
+  /* small */
+  html {
+    font-size: 100%;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width: 38em) {
+  /* medium */
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+  ul.mainnav {
+    border-left: 1px solid lightgrey;
+    border-bottom: none;
+  }
+  .mainnav > li {
+    float: left;
+    width: 50%;
+    list-style: none;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  /* large */
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (min-width: 90em) {
+  /* extra large */
+  html {
+    font-size: 130%;
+
+    .mainnav > li:last-child {
+      border-right: none;
+    }
+  }
+}
