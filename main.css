@@ -228,10 +228,6 @@ main {
   padding: 1rem 2rem;
 }
 
-.col--2:last-child {
-  border: none;
-}
-
 footer {
   padding: 1rem 2rem;
   width: 100%;
@@ -274,6 +270,33 @@ footer {
   html {
     font-size: 120%;
     line-height: 1.5;
+  }
+
+  ul.mainnav {
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .mainnav > li {
+    float: left;
+    width: 25%;
+    list-style: none;
+    border-right: 1px solid lightgrey;
+  }
+
+  .mainnav > li:last-child {
+    border-right: none;
+  }
+
+  .col--2 {
+    width: 50%;
+    border-right: 1px solid lightgrey;
+    float: left;
+    padding: 1rem 2rem;
+  }
+
+  .col--2:last-child {
+    border: none;
   }
 }
 
